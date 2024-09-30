@@ -64,17 +64,20 @@ Once the script is running, you will be prompted for the following inputs:
 ### Files Structure
 
 ```bash
-twap-order-binance-bot/
+TWAP-ORDER-BINANCE-BOT/
 ├── src/
-│   ├── GetPrice.js             # Logic for fetching the current ask price of a trading pair.
-│   ├── PlaceOrder.js           # Logic for placing orders on Binance and fetching account balances.
-├── .env                        # Environment variables for API Key, Secret Key, and Binance Base URL.
-├── .env.example                # Example of the .env file configuration.
-├── .gitignore                  # Specifies files and directories to be ignored by Git (e.g., node_modules, .env).
-├── index.js                    # Main script for running the bot, handling user input and calling order/price functions.
-├── package.json                # Contains metadata about the project, including dependencies and scripts.
-├── package-lock.json           # Auto-generated file that locks the dependency versions.
-├── README.md                   # Documentation for setting up and running the project.
+│   ├── GetPrice.js         # Handles fetching the latest ask price from Binance API.
+│   ├── PlaceOrder.js       # Handles placing orders and balance checks on Binance.
+│   ├── servertime.js       # Fetches the server time from Binance.
+│   ├── Signature.js        # Handles the creation of HMAC SHA256 signatures for API requests.
+├── .env                    # Contains environment variables for API Key, Secret Key, and Base URL.
+├── .env.example            # Example of environment variables configuration.
+├── .gitignore              # Specifies files and directories to be ignored by Git (e.g., node_modules, .env).
+├── index.js                # Main entry point for the script, handles user input and logic flow.
+├── package-lock.json       # Auto-generated file that locks the exact versions of dependencies.
+├── package.json            # Contains metadata about the project, including dependencies and scripts.
+└── README.md               # Project documentation, setup instructions, and usage details.
+
 
 ```
 
